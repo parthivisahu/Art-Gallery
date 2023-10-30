@@ -1,0 +1,78 @@
+.container{
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    min-height: 0;
+    min-width: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    /* position: relative; */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-image: url("https://t4.ftcdn.net/jpg/01/36/56/49/360_F_136564967_2F3S1E04Wb4durBhjwyDaLefdeo6udnn.jpg");
+
+}
+img{
+    position: relative;
+    height: 70vh;
+    width: 30vw;
+    margin: 5%;
+    padding-top: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.artwork-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+}
+label
+{
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.col{
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    
+}
+.content{
+    height: 100vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-image: url("https://media.istockphoto.com/id/1318101781/photo/stone-black-texture-background-dark-cement-wall.webp?b=1&s=170667a&w=0&k=20&c=KZzF_N_cRN5OXL873BJWfKfsBY0qN6cpxXEb_RUpNNs=");
+}
+.description
+{
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+}
+.History
+{
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.col-md-9{
+    position: relative;
+    padding-top: 5%;
+    padding-right: 10%;
+    padding-left: 25%;
+    text-align: justify;
+
+}

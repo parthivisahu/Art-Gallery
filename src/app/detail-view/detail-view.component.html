@@ -1,0 +1,24 @@
+<mat-progress-bar *ngIf="!artworkLoaded" mode="indeterminate"></mat-progress-bar>
+<div class="content">
+  <div *ngIf="artworkLoaded" class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <img
+          src="https://www.artic.edu/iiif/2/{{ 
+            artwork?.image_id 
+          }}/full/550,/0/default.jpg"
+          class="rounded mx-auto d-block"
+          alt="art"
+          class="art"
+        />
+       
+      </div>
+      <div class="col-md-9 ">
+        <label><b>Title: </b>{{ artwork?.title }}</label><br /><br />
+        <label><b>Artist: </b>{{ artwork?.artist_title }}</label><br /><br />
+        <label><b>Place Of Origin: </b> {{ artwork?.place_of_origin }}</label><br /><br />
+        <p class="description"><b>Art Description:</b> {{ artwork?.thumbnail?.alt_text }}</p>
+        <p class="History"><b>Exhibition History: </b>{{ artwork?.publication_history | slice:0:800 }}</p>
+    </div>
+  </div>
+</div>
