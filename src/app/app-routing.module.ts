@@ -5,13 +5,15 @@ import { RouterModule } from '@angular/router';
 import { TableViewComponent } from './table-view/table-view.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { HomeComponent } from './home/home.component';
-import { FavouritesComponent } from './favourites/favourites.component';
+import { WishlistComponent } from './wishlist/wishlist.component.spec';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'table', component: TableViewComponent },
   { path: 'detail/:id', component: DetailViewComponent },
-  { path: 'favourites', component: FavouritesComponent },
+  { path:'wishlist', component:WishlistComponent},
+  { path:'documentation', component:DocumentationComponent}
 ];
 
 @NgModule({

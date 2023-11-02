@@ -181,3 +181,18 @@ export interface Pagination {
     current_page: number;
     next_url:     string;
 }
+
+
+export interface WishlistedData{
+    id:number,
+    title:string,
+    image_id:string
+}
+
+export interface WishlistedArtwork{
+    data:WishlistedData[],
+    info:Info,
+    config:Config
+}
+
+

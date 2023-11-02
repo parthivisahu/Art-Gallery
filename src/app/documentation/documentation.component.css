@@ -1,0 +1,27 @@
+
+.img-doc{
+    width: 100%;
+}
+.container{
+    font-size: 14px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-fluid{
+    background-color: rgb(248, 230, 208);
+}
+
+.para-main{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 5%;
+}
+
+ul{
+    list-style-type: none;
+    width: 90%;
+    margin-left: 2%;
+    text-align: justify;
+    display:list-item;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

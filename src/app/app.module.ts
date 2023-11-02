@@ -17,10 +17,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FavouritesComponent } from './favourites/favourites.component';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 @NgModule({
-  declarations: [AppComponent, TableViewComponent, DetailViewComponent,HomeComponent, FavouritesComponent],
+  declarations: [AppComponent, TableViewComponent, DetailViewComponent,HomeComponent, DocumentationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import { MatPaginator, MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { Artwork, ArtworkList } from 'src/shared/artWork.model';
@@ -13,21 +13,33 @@ import { Router } from '@angular/router';
   
 })
 export class TableViewComponent {
-  isFavourite = false;
-  checkFavourite(imageId: string) {
-    const index = this.favourites.findIndex((fav: any) => fav.imageId === imageId);
-    this.isFavourite = index !== -1;
-  }
-  
-
-  favourites: any[] = [];
-  addToFavourites(image: any) {
-    this.favourites.push(image);
-  }
-
+  @Input() image_id!:string;
+  @Input() title!:string;
+  @Input() workId!:string;
+  @Input() artist!:string;
+  @Input() image_alt!:string;
+  @Output() deleteItemEvent = new EventEmitter<number> ();
+  @Output() addItemEvent = new EventEmitter<number> ();
+  inWishlist = false;
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
+  addToWishlist(id:number){
+    this.inWishlist = this.artworksService.addToWishlist(id);
+    if(!this.inWishlist){
+      this.deleteItem(+this.workId)
+    }else{
+      this.addItemEvent.emit(id)
+    }
+  }
+
+  deleteItem(id:number){
+    this.deleteItemEvent.emit(id);
   }
   
   displayedColumns: string[] = ['image_id','title','artist_title', 'place_of_origin', 'date_display'];

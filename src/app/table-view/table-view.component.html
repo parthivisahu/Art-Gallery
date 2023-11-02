@@ -20,10 +20,11 @@
           src="https://www.artic.edu/iiif/2/{{
             element.image_id
           }}/full/100,/0/default.jpg"
-          alt=""
+          alt="Preview of {{ element.title }}"
           srcset=""
           />
-          <button (click)="addToFavourites(element)" type="submit" class="btn" [style.color]="isFavourite ? 'red' : 'grey'"><i class="fa-solid fa-heart"></i></button>
+          <button (click)="addToWishlist(+workId)" type="submit" class="btn"><i class="fa-solid fa-heart"></i></button>
+          
         </td>
       </ng-container>
 
